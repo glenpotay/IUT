@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaFX Leaflet Map</title>
+    <meta charset="utf-8" />
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden; /* désactive scrollbars */
+            width: 100%;
+            height: 100%;
+        }
+        #map { height: 100vh; width: 100vw; margin: 0; padding: 0; }
+    </style>
+    <link
+            rel="stylesheet"
+            href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+    />
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
+</head>
+<body>
+<div id="map"></div>
+<script>
+    // Center map on France
+    var map = L.map('map').setView([46.603354, 1.888334], 6); // Coordinates of France, zoom level 6
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom: 19,
+        attribution: '&copy; OpenStreetMap contributors'
+    }).addTo(map);
+
+    // Function to add markers dynamically
+    function addMarkers(locations) {
+        locations.forEach(function(loc) {
+            L.marker([loc.lat, loc.lng]).addTo(map)
+                .bindPopup(loc.name || "No name");
+        });
+    }
+</script>
+</body>
+</html>

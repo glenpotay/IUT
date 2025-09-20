@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="settingsPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="961.0" prefWidth="1444.0" style="-fx-background-radius: 30; -fx-background-color: white; -fx-border-radius: 30;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.common.DashboardSettingsController">
+    <children>
+        <Pane fx:id="colorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="1444.0" style="-fx-background-color: linear-gradient(from 0% 0% to 100% 0%,  #FEB0B0, #A80037); -fx-background-radius: 30 30 0 0;">
+            <children>
+                <Button layoutX="1359.0" layoutY="29.0" mnemonicParsing="false" onAction="#fermerClicked" style="-fx-background-color: transparent; -fx-border-radius: 100; -fx-background-radius: 100;" stylesheets="@../../css/button.css">
+               <graphic>
+                        <ImageView fx:id="croix" fitHeight="43.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../../images/Croix.png" />
+                            </image>
+                        </ImageView>
+               </graphic>
+                </Button>
+            </children>
+        </Pane>
+        <Text fx:id="prenomNomParam" layoutX="409.0" layoutY="252.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Prénom Nom">
+            <font>
+                <Font name="System Bold" size="32.0" />
+            </font>
+        </Text>
+        <Circle fill="WHITE" layoutX="304.0" layoutY="223.0" opacity="0.31" radius="70.0" stroke="WHITE" strokeType="INSIDE">
+            <effect>
+                <Shadow />
+            </effect>
+        </Circle>
+        <Circle fill="WHITE" layoutX="304.0" layoutY="217.0" radius="70.0" stroke="WHITE" strokeType="INSIDE" />
+        <Text layoutX="166.0" layoutY="370.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Modifier votre profil public">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Text>
+        <Text layoutX="166.0" layoutY="350.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Paramètres de Compte">
+            <font>
+                <Font name="System Bold" size="18.0" />
+            </font>
+        </Text>
+        <Text layoutX="166.0" layoutY="450.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Photo de profil">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+        </Text>
+        <Text layoutX="166.0" layoutY="470.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Importer une image">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Text>
+        <Text fx:id="certifText" layoutX="166.0" layoutY="570.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Certifications">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+        </Text>
+        <Text fx:id="compText" layoutX="166.0" layoutY="590.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Quelles sont vos compétences ?">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Text>
+        <Button layoutX="500.0" layoutY="420.0" mnemonicParsing="false" onAction="#importerPdp" prefHeight="70.0" prefWidth="70.0" style="-fx-background-color: #EEEEEE; -fx-border-color: #CCCCCC; -fx-background-radius: 100; -fx-border-radius: 100;" stylesheets="@../../css/button.css">
+            <graphic>
+                <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../../images/Importer.png" />
+                    </image>
+                </ImageView>
+            </graphic>
+        </Button>
+        <Button layoutX="1064.0" layoutY="350.0" mnemonicParsing="false" onAction="#annulerClicked" prefHeight="30.0" prefWidth="70.0" style="-fx-background-color: #CCCCCC; -fx-background-radius: 5;" stylesheets="@../../css/button.css" text="Annuler" />
+        <Button layoutX="1148.0" layoutY="350.0" mnemonicParsing="false" onAction="#enregistrerClicked" prefHeight="30.0" prefWidth="110.0" style="-fx-background-color: black; -fx-background-radius: 5;" stylesheets="@../../css/button.css" text="Enregistrer" textFill="WHITE" />
+        <Text layoutX="168.0" layoutY="822.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Supprimer le compte">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+        </Text>
+        <Text layoutX="168.0" layoutY="844.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Attention, cette opération est définitive">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Text>
+        <Button layoutX="502.0" layoutY="813.0" mnemonicParsing="false" onAction="#supprimerClicked" prefHeight="30.0" prefWidth="147.0" style="-fx-background-color: #A80037; -fx-background-radius: 5;" stylesheets="@../../css/button.css" text="Supprimer le compte" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font>
+        </Button>
+        <CheckBox fx:id="checkPSE1" layoutX="516.0" layoutY="567.0" mnemonicParsing="false" text="PSE1" />
+        <CheckBox fx:id="checkPSE2" layoutX="586.0" layoutY="567.0" mnemonicParsing="false" text="PSE2" />
+        <CheckBox fx:id="checkCE" layoutX="656.0" layoutY="567.0" mnemonicParsing="false" text="CE" />
+        <CheckBox fx:id="checkCP" layoutX="726.0" layoutY="567.0" mnemonicParsing="false" text="CP" />
+        <CheckBox fx:id="checkCO" layoutX="796.0" layoutY="567.0" mnemonicParsing="false" text="CO" />
+        <CheckBox fx:id="checkSSA" layoutX="516.0" layoutY="597.0" mnemonicParsing="false" text="SSA" />
+        <CheckBox fx:id="checkVPSP" layoutX="586.0" layoutY="597.0" mnemonicParsing="false" text="VPSP" />
+        <CheckBox fx:id="checkPBC" layoutX="516.0" layoutY="627.0" mnemonicParsing="false" text="PBC" />
+        <CheckBox fx:id="checkPBF" layoutX="586.0" layoutY="627.0" mnemonicParsing="false" text="PBF" />
+        <Circle fx:id="pdpParamCircle" fill="#962424" layoutX="304.0" layoutY="217.0" radius="68.0" stroke="WHITE" strokeType="INSIDE" />
+        <Text layoutX="168.0" layoutY="743.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Se déconnecter">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+        </Text>
+        <Text layoutX="168.0" layoutY="765.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Se déconnecter de l'application">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Text>
+        <Button layoutX="502.0" layoutY="734.0" mnemonicParsing="false" onAction="#deconnecterClicked" prefHeight="30.0" prefWidth="147.0" style="-fx-background-color: #A80037; -fx-background-radius: 5;" stylesheets="@../../css/button.css" text="Se déconnecter" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font>
+        </Button>
+        <Line endX="1260.0" endY="400.0" startX="166.0" startY="400.0" />
+      <Line endX="1260.0" endY="520.0" startX="166.0" startY="520.0" />
+      <Line fx:id="line" endX="1260.0" endY="700.0" startX="166.0" startY="700.0" />
+      <Line endX="1260.0" endY="900.0" startX="166.0" startY="900.0" />
+      <CheckBox fx:id="greedyCheckBox" layoutX="168.0" layoutY="554.0" mnemonicParsing="false" onAction="#greedyCheckBoxToggled" stylesheets="@../../css/button.css" text="Utiliser l'algorithme d'affectation glouton pour l'affectation" visible="false">
+         <font>
+            <Font name="Poppins Regular" size="14.0" />
+         </font></CheckBox>
+    </children>
+</AnchorPane>

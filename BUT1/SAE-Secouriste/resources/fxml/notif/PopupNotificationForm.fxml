@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.shape.SVGPath?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="notificationFormAnchorPane" prefHeight="781.0" prefWidth="537.0" style="-fx-background-color: trensparent;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.notif.PopupNotificationFormController">
+   <children>
+      <GridPane alignment="CENTER" layoutX="14.0" prefHeight="722.0" prefWidth="536.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 30;" styleClass="send" stylesheets="@../../css/button.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="60.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints maxHeight="122.59998168945313" minHeight="10.0" prefHeight="112.19998779296876" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="98.60001220703126" minHeight="0.0" prefHeight="54.40000610351562" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="206.79999999999998" minHeight="10.0" prefHeight="51.19999389648436" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="370.20000610351565" minHeight="10.0" prefHeight="355.2000183105469" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <TextField fx:id="subjectTextField" prefHeight="90.0" prefWidth="423.0" promptText="Sujet" style="-fx-background-color: trensparent;" GridPane.columnSpan="2">
+               <GridPane.margin>
+                  <Insets top="10.0" />
+               </GridPane.margin>
+               <font>
+                  <Font name="Poppins Regular" size="48.0" />
+               </font>
+               <padding>
+                  <Insets left="18.0" />
+               </padding>
+            </TextField>
+            <BorderPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: trensparent;" GridPane.columnIndex="2">
+               <center>
+                  <Button fx:id="closeButtonNotificationForm" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#closeNotificationForm" opacity="0.66" prefHeight="28.0" prefWidth="51.0" style="-fx-background-radius: 100; -fx-background-color: #FF4747;" styleClass="send" stylesheets="@../../css/button.css" textFill="WHITE" textOverrun="CLIP" BorderPane.alignment="CENTER">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                     <graphic>
+                        <SVGPath content="M17.7072 0.388064C17.3167 -0.00240158 16.6836 -0.00240158 16.2932 0.388064L8.99999 7.68125L1.70683 0.388064C1.31637 -0.00240158 0.683306 -0.00240158 0.29285 0.388064C-0.0976166 0.77852 -0.0976166 1.41159 0.29285 1.80204L7.58602 9.09522L0.29287 16.3883C-0.0975966 16.7789 -0.0975966 17.4119 0.29287 17.8024C0.683326 18.1928 1.31639 18.1928 1.70685 17.8024L8.99999 10.5092L16.2932 17.8024C16.6836 18.1928 17.3167 18.1928 17.7072 17.8024C18.0976 17.4119 18.0976 16.7789 17.7072 16.3884L10.414 9.09522L17.7072 1.80204C18.0976 1.41159 18.0976 0.77852 17.7072 0.388064Z" fill="WHITE" />
+                     </graphic>
+                  </Button>
+               </center>
+            </BorderPane>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="De :" GridPane.columnSpan="2" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Poppins Regular" size="24.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="18.0" />
+               </GridPane.margin>
+            </Text>
+            <TextArea fx:id="messageTextArea" prefHeight="0.0" prefWidth="0.0" promptText="Entrer votre message ..." style="-fx-background-color: trensparent;" wrapText="true" GridPane.columnSpan="3" GridPane.rowIndex="3" GridPane.rowSpan="3">
+               <font>
+                  <Font name="Poppins Regular" size="24.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets top="10.0" />
+               </GridPane.margin>
+            </TextArea>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Vers :" GridPane.rowIndex="2">
+               <font>
+                  <Font name="Poppins Regular" size="24.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="18.0" />
+               </GridPane.margin>
+            </Text>
+            <BorderPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: trensparent;" GridPane.columnIndex="1" GridPane.rowIndex="6">
+               <top>
+                  <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#sendMessage" prefHeight="56.0" prefWidth="250.0" style="-fx-background-radius: 20; -fx-background-color: #111113;" styleClass="send" stylesheets="@../../css/button.css" text="Envoyer" textFill="WHITE" textOverrun="CLIP" BorderPane.alignment="CENTER">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Button>
+               </top>
+            </BorderPane>
+            <Label fx:id="fromTextlabel" text="from" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Poppins Regular" size="24.0" />
+               </font>
+            </Label>
+            <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="2">
+               <right>
+                  <Label fx:id="dateTextlabel" alignment="CENTER_RIGHT" prefHeight="28.0" prefWidth="226.0" text="date" textFill="#00000072" wrapText="true" BorderPane.alignment="CENTER">
+                     <font>
+                        <Font name="Poppins Regular" size="20.0" />
+                     </font>
+                     <BorderPane.margin>
+                        <Insets right="30.0" />
+                     </BorderPane.margin>
+                  </Label>
+               </right>
+               <left>
+                  <ComboBox fx:id="dpsComboBox" promptText="Choisir un DPS" style="-fx-background-color: #111113; -fx-background-radius: 20; -fx-prompt-text-fill: #111113;" styleClass="dark-combo-box" stylesheets="@../../css/button.css" BorderPane.alignment="CENTER" />
+               </left>
+            </BorderPane>
+         </children>
+         <effect>
+            <DropShadow height="35.03" radius="18.77" spread="0.26" width="42.05">
+               <color>
+                  <Color opacity="0.3199087977409363" />
+               </color>
+            </DropShadow>
+         </effect>
+      </GridPane>
+   </children>
+   <padding>
+      <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+   </padding>
+</AnchorPane>

@@ -1,0 +1,164 @@
+@font-face {
+    font-family: 'Poppins';
+    src: url('../fonts/Poppins-Light.ttf');
+    font-weight: 300;
+}
+
+
+.choice-box {
+    -fx-font-family: 'Poppins';
+    -fx-font-weight: 300;
+    -fx-text-fill: white;
+    -fx-prompt-text-fill: rgba(255, 255, 255, 0.7);
+}
+
+.button:pressed {
+    -fx-background-color: #3a86ff;
+    -fx-effect: dropshadow(gaussian, #222, 8, 0.3, 0, 2);
+    -fx-scale-x: 0.97;
+    -fx-scale-y: 0.97;
+}
+
+.button:hover {
+    -fx-brightness: 1.1; /* Légèrement plus lumineux */
+    -fx-scale-x: 1.02;
+    -fx-scale-y: 1.02;
+    -fx-cursor: hand;
+}
+
+.light-button:pressed {
+    -fx-background-color: #3a86ff;
+    -fx-effect: dropshadow(gaussian, #939393, 8, 0.3, 0, 2);
+    -fx-scale-x: 0.97;
+    -fx-scale-y: 0.97;
+}
+
+
+.send {
+    -fx-border-radius: 20;
+}
+
+
+.text-field {
+    -fx-background-color: trensparent;
+    -fx-prompt-text-fill: black;
+}
+
+
+/* DARK COMBO BOX */
+
+.dark-combo-box {
+    -fx-background-color: #1e1e1e;
+    -fx-background-radius: 5;
+    -fx-border-radius: 5;
+    -fx-font-family: 'Poppins';
+    -fx-font-weight: 300;
+    -fx-text-fill: white;
+    -fx-prompt-text-fill: rgba(255, 255, 255, 0.7);
+}
+
+.dark-combo-box .list-cell {
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+    -fx-font-family: 'Poppins';
+    -fx-font-weight: 300;
+}
+
+.dark-combo-box .combo-box-popup .list-view {
+    -fx-background-color: #2d2d2d;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.4), 8, 0, 0, 2);
+}
+
+.dark-combo-box .combo-box-popup .list-view .list-cell {
+    -fx-background-color: #2d2d2d;
+    -fx-text-fill: white;
+}
+
+.dark-combo-box .combo-box-popup .list-view .list-cell:hover {
+    -fx-background-color: #3a3a3a;
+}
+
+.dark-combo-box .combo-box-popup .list-view .list-cell:selected {
+    -fx-background-color: #3a86ff;
+}
+
+.dark-combo-box .arrow {
+    -fx-background-color: white;
+}
+
+.dark-combo-box:showing .arrow {
+    -fx-background-color: #3a86ff;
+    -fx-translate-y: 2;
+    -fx-rotate: 180;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* WHITE COMBO BOX */
+
+.jfx-combo-box {
+    -fx-background-color: #EBF0F6;
+    -fx-background-radius: 5;
+    -fx-font-family: 'Poppins';
+    -fx-font-weight: 300;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 4, 0, 0, 0);
+}
+
+
+
+.jfx-combo-box:hover {
+    -fx-background-color: #B9D9FF;
+}
+
+.jfx-combo-box .list-cell {
+    -fx-font-family: 'Poppins';
+    -fx-font-weight: 300;
+}
+
+.jfx-combo-box .list-view .list-cell {
+    -fx-font-family: 'Poppins';
+    -fx-font-weight: 300;
+    -fx-text-fill: #333333;
+}
+
+.jfx-combo-box .list-view .list-cell:hover {
+    -fx-background-color: #e6e6e6;
+}
+
+.jfx-combo-box .list-view .list-cell:selected {
+    -fx-background-color: #3a86ff;
+    -fx-text-fill: white;
+}
+
+.jfx-combo-box .arrow {
+    -fx-background-color: #555555;
+    -fx-shape: "M0,0 L10,0 L5,5 Z";
+    -fx-scale-x: 0.8;
+    -fx-scale-y: 0.8;
+    /* Une seule déclaration de transition suffit */
+    -fx-transition-duration: 0.3s;
+}
+
+/* Animation au survol */
+.jfx-combo-box:hover .arrow {
+    -fx-background-color: #3a86ff;
+}
+
+/* Animation quand ouvert */
+.jfx-combo-box:showing .arrow {
+    -fx-background-color: #3a86ff;
+    -fx-translate-y: 2;
+    -fx-rotate: 180;
+    /* Ne pas redéfinir la transition ici */
+}

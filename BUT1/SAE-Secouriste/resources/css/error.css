@@ -1,0 +1,7 @@
+.field-error {
+    -fx-prompt-text-fill: #ffcccc;
+}
+
+.comboBox-error {
+    -fx-background-color: #ffcccc;
+}

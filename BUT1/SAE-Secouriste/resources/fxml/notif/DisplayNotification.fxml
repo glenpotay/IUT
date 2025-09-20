@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.SVGPath?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="380.0" prefWidth="380.0" style="-fx-background-color: #121215; -fx-background-radius: 25;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.notif.DisplayNotificationController">
+   <children>
+      <Label layoutX="84.8" layoutY="21.4" prefHeight="52.0" prefWidth="251.0" text="Notifications" textFill="WHITE" AnchorPane.leftAnchor="84.8" AnchorPane.topAnchor="21.4">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Label>
+      <ScrollPane fx:id="scrollPaneNotification" fitToWidth="true" layoutX="15.2" layoutY="100.0" prefHeight="287.0" prefWidth="351.0" style="-fx-background-color: transparent; -fx-background: transparent;" stylesheets="@../../css/main.css" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="100.0">
+         <content>
+            <VBox fx:id="VBoxlistNotification" style="-fx-background-color: #121215;" />
+         </content></ScrollPane>
+      <Button fx:id="openFormButton" layoutX="314.0" layoutY="28.0" mnemonicParsing="false" onAction="#openForm" prefHeight="38.0" prefWidth="38.0" style="-fx-background-radius: 50; -fx-background-color: trensparent;" textFill="WHITE">
+         <graphic>
+            <SVGPath content="M7.40083 10.5957L16.7407 1.25925M7.66632 11.0155L9.78414 15.2513C10.296 16.2748 10.5518 16.7867 10.8742 16.9239C11.154 17.043 11.4738 17.0214 11.7351 16.8658C12.0361 16.6866 12.221 16.145 12.5908 15.062L16.5923 3.34326C16.9146 2.39961 17.0757 1.92778 16.9654 1.61565C16.8695 1.34412 16.6559 1.13053 16.3844 1.03459C16.0722 0.924319 15.6004 1.08543 14.6567 1.40765L2.93795 5.4092C1.85494 5.77901 1.31343 5.96391 1.13417 6.26496C0.978604 6.52621 0.957048 6.84601 1.07615 7.12573C1.21339 7.44811 1.72519 7.70407 2.74878 8.2158L6.98446 10.3337C7.15316 10.418 7.2375 10.4602 7.31049 10.5165C7.37539 10.5665 7.43352 10.6246 7.48345 10.6894C7.53987 10.7625 7.58199 10.8469 7.66632 11.0155Z" fill="#ffffff00" mouseTransparent="true" stroke="WHITE" strokeWidth="2.0" />
+         </graphic></Button>
+      <SVGPath content="M7.9992 0.0952148C7.36706 0.0952148 6.85634 0.605929 6.85634 1.23807V1.92379C4.2492 2.45236 2.28492 4.7595 2.28492 7.52379V8.43093C2.28492 10.0524 1.73134 11.6274 0.72063 12.8916L0.188487 13.5595C-0.0186558 13.8166 -0.0579415 14.1702 0.0849157 14.4666C0.227773 14.7631 0.527773 14.9524 0.856344 14.9524H15.1421C15.4706 14.9524 15.7706 14.7631 15.9135 14.4666C16.0563 14.1702 16.0171 13.8166 15.8099 13.5595L15.2778 12.8952C14.2671 11.6274 13.7135 10.0524 13.7135 8.43093V7.52379C13.7135 4.7595 11.7492 2.45236 9.14206 1.92379V1.23807C9.14206 0.605929 8.63134 0.0952148 7.9992 0.0952148ZM7.9992 3.52379C10.2099 3.52379 11.9992 5.31307 11.9992 7.52379V8.43093C11.9992 10.1416 12.4956 11.8095 13.4171 13.2381H2.58134C3.50277 11.8095 3.9992 10.1416 3.9992 8.43093V7.52379C3.9992 5.31307 5.78849 3.52379 7.9992 3.52379ZM10.2849 16.0952H5.71349C5.71349 16.7024 5.95277 17.2845 6.38134 17.7131C6.80992 18.1416 7.39206 18.3809 7.9992 18.3809C8.60634 18.3809 9.18849 18.1416 9.61706 17.7131C10.0456 17.2845 10.2849 16.7024 10.2849 16.0952Z" fill="WHITE" layoutX="50.0" layoutY="39.0" strokeLineCap="ROUND" />
+   </children>
+</AnchorPane>

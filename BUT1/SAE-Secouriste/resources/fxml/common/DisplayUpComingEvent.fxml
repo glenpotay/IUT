@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="401.0" prefWidth="380.0" style="-fx-background-color: #121215; -fx-background-radius: 25;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.common.DisplayUpComingEventController">
+   <children>
+      <Label layoutX="14.0" layoutY="25.0" prefHeight="52.0" prefWidth="251.0" text="Évènement à venir" textFill="WHITE" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="25.0">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Label>
+      <ScrollPane fitToWidth="true" layoutX="15.2" layoutY="100.0" prefHeight="287.0" prefWidth="351.0" style="-fx-background-color: transparent; -fx-background: transparent;" stylesheets="@../../css/main.css" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="100.0">
+         <content>
+            <VBox fx:id="listEvent" style="-fx-background-color: #121215;" />
+         </content></ScrollPane>
+      <Label fx:id="countLabel" layoutX="343.0" layoutY="29.0" prefWidth="42.0" text="0" textFill="WHITE" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="29.0">
+         <font>
+            <Font size="32.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

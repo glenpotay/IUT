@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="pageConnexion" focusTraversable="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="540.0" minWidth="960.0" onKeyPressed="#enterConnectionClicked" prefHeight="1026.0" prefWidth="1824.0" stylesheets="@../../css/button.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.auth.LoginController">
+    <children>
+        <FlowPane alignment="CENTER" cache="true" columnHalignment="CENTER" layoutX="-1.6" prefHeight="1026.0" prefWidth="1824.0" style="-fx-background-color: #F5F5F5;" styleClass="windowed" stylesheets="@../../css/main.css" AnchorPane.bottomAnchor="-0.40000000000009095" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <HBox alignment="CENTER" depthTest="DISABLE" prefHeight="900.0" prefWidth="1600.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 25;">
+                    <children>
+                        <VBox alignment="CENTER" prefHeight="950.0" prefWidth="800.0" stylesheets="@../../css/main.css">
+                            <children>
+                                <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../../images/logo.png" />
+                                    </image>
+                                </ImageView>
+                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Secouriste.fr" VBox.vgrow="ALWAYS">
+                                    <font>
+                                        <Font name="Poppins SemiBold" size="80.0" />
+                                    </font>
+                                    <VBox.margin>
+                                        <Insets bottom="20.0" />
+                                    </VBox.margin>
+                                </Text>
+                        <Button mnemonicParsing="false" onAction="#quickLogin" prefHeight="66.0" prefWidth="500.0" style="-fx-background-color: #1e1e1e; -fx-background-radius: 15;" text="Connexion rapide" textFill="WHITE">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Button>
+                                <GridPane maxHeight="-Infinity" maxWidth="-Infinity" mouseTransparent="true" prefHeight="30.0" prefWidth="500.0">
+                                    <columnConstraints>
+                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="10.0" />
+                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    </columnConstraints>
+                                    <rowConstraints>
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    </rowConstraints>
+                                    <children>
+                                        <Line endX="537.9928588867188" endY="346.0858154296875" startX="343.4999694824219" startY="345.992919921875" GridPane.columnIndex="2" />
+                                        <Line endX="540.392822265625" endY="345.34259033203125" startX="343.4999694824219" startY="345.9000244140625" />
+                                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="OU" GridPane.columnIndex="1">
+                                            <font>
+                                                <Font name="Poppins Regular" size="20.0" />
+                                            </font>
+                                        </Text>
+                                    </children>
+                                    <VBox.margin>
+                                        <Insets bottom="20.0" top="20.0" />
+                                    </VBox.margin>
+                                </GridPane>
+                                <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="65.0" prefWidth="500.0" style="-fx-background-color: #FAFAFA; -fx-background-radius: 15;">
+                                    <VBox.margin>
+                                        <Insets bottom="20.0" />
+                                    </VBox.margin>
+                                    <effect>
+                                        <DropShadow radius="12.925" width="32.7">
+                                            <color>
+                                                <Color opacity="0.17705167829990387" />
+                                            </color>
+                                        </DropShadow>
+                                    </effect>
+                                    <center>
+                                        <TextField fx:id="mailTextField" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="30.0" prefWidth="400.0" promptText="Adresse mail" style="-fx-background-color: none; -fx-prompt-text-fill: black;" BorderPane.alignment="CENTER">
+                                            <font>
+                                                <Font name="Poppins Light" size="18.0" />
+                                            </font>
+                                        </TextField>
+                                    </center>
+                                    <left>
+                                        <ImageView fitHeight="53.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+                                            <image>
+                                                <Image url="@../../images/mail.png" />
+                                            </image>
+                                            <BorderPane.margin>
+                                                <Insets left="20.0" />
+                                            </BorderPane.margin>
+                                        </ImageView>
+                                    </left>
+                                </BorderPane>
+                                <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="65.0" prefWidth="500.0" style="-fx-background-color: #FAFAFA; -fx-background-radius: 15;">
+                                    <effect>
+                                        <DropShadow radius="12.925" width="32.7">
+                                            <color>
+                                                <Color opacity="0.17705167829990387" />
+                                            </color>
+                                        </DropShadow>
+                                    </effect>
+                                    <VBox.margin>
+                                        <Insets bottom="40.0" />
+                                    </VBox.margin>
+                                    <left>
+                                        <ImageView fitHeight="53.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+                                            <image>
+                                                <Image url="@../../images/mdp.png" />
+                                            </image>
+                                            <BorderPane.margin>
+                                                <Insets left="20.0" />
+                                            </BorderPane.margin>
+                                        </ImageView>
+                                    </left>
+                           <center>
+                              <PasswordField fx:id="passwordPasswordField" maxWidth="400.0" promptText="Mot de passe" style="-fx-background-color: none; -fx-prompt-text-fill: black;" BorderPane.alignment="CENTER">
+                                 <font>
+                                    <Font name="Poppins Light" size="18.0" />
+                                 </font>
+                              </PasswordField>
+                           </center>
+                                </BorderPane>
+                        <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="65.0" minWidth="500.0" mnemonicParsing="false" onAction="#ButtonConnexionClicked" style="-fx-background-radius: 15; -fx-background-color: #EFEFEF;" stylesheets="@../../css/button.css" text="Se connecter">
+                           <font>
+                              <Font name="Poppins Medium" size="20.0" />
+                           </font>
+                           <effect>
+                              <DropShadow height="28.02" offsetY="3.0" radius="12.34" width="23.34">
+                                 <color>
+                                    <Color opacity="0.3343465030193329" />
+                                 </color>
+                              </DropShadow>
+                           </effect>
+                           <VBox.margin>
+                              <Insets bottom="20.0" />
+                           </VBox.margin>
+                        </Button>
+                        <Hyperlink onAction="#linkToRegister" text="Inscription">
+                           <font>
+                              <Font name="Poppins Medium" size="20.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets bottom="15.0" />
+                           </VBox.margin>
+                        </Hyperlink>
+                        <Hyperlink onAction="#linkToReceiveCode" text="Mot de passe oublié ?">
+                           <font>
+                              <Font name="Poppins Medium" size="20.0" />
+                           </font>
+                        </Hyperlink>
+                            </children>
+                        </VBox>
+                        <GridPane mouseTransparent="true" prefHeight="950.0" prefWidth="800.0" styleClass="root" stylesheets="@../../css/main.css">
+                            <columnConstraints>
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            </columnConstraints>
+                            <rowConstraints>
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            </rowConstraints>
+                            <children>
+                                <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Secourir est votre vocation ?" wrappingWidth="517.2640991210938">
+                                    <font>
+                                        <Font name="Poppins Medium" size="48.0" />
+                                    </font>
+                                    <GridPane.margin>
+                                        <Insets bottom="50.0" left="70.0" />
+                                    </GridPane.margin>
+                                </Text>
+                                <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Rejoignez maintenant l’Association des sercouristes de France et participez aux interventions des Jeux Olympiques 2030 !" wrappingWidth="517.2640991210938" GridPane.rowIndex="2">
+                                    <font>
+                                        <Font name="Poppins Light" size="24.0" />
+                                    </font>
+                                    <GridPane.margin>
+                                        <Insets left="70.0" top="50.0" />
+                                    </GridPane.margin>
+                                </Text>
+                            </children>
+                        </GridPane>
+                    </children>
+               <effect>
+                  <DropShadow height="104.75" radius="58.1875" width="130.0">
+                     <color>
+                        <Color opacity="0.30000001192092896" />
+                     </color>
+                  </DropShadow>
+               </effect>
+                </HBox>
+            </children>
+            <opaqueInsets>
+                <Insets />
+            </opaqueInsets>
+        </FlowPane>
+    </children>
+</AnchorPane>

@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.TilePane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="gestionEvenement" prefHeight="990.0" prefWidth="1444.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 30;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.admin.DashboardEventController">
+   <children>
+      <GridPane alignment="CENTER" prefHeight="996.0" prefWidth="1438.0" style="-fx-background-radius: 0 0 30 30;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="252.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="761.0000152587891" minHeight="10.0" prefHeight="749.0000152587891" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #F9FCFF; -fx-background-radius: 30;" GridPane.rowIndex="1">
+               <children>
+                  <ScrollPane hbarPolicy="NEVER" prefHeight="200.0" prefWidth="200.0" style="-fx-background-radius: 20; -fx-border-radius: 20; -fx-background-color: #F9FCFF;" stylesheets="@../../css/main.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="0.0">
+                     <content>
+                        <TilePane fx:id="evenementTile" alignment="CENTER" prefColumns="3" prefHeight="728.0" prefWidth="1431.0" style="-fx-background-radius: 20; -fx-border-radius: 20; -fx-background-color: #F9FCFF;" />
+                     </content>
+                  </ScrollPane>
+               </children>
+            </AnchorPane>
+            <GridPane alignment="BOTTOM_CENTER" style="-fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 4, 0.3, 0, 2); -fx-background-color: #FFFFFF; -fx-background-radius: 30 30 0 0;">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="991.0" minWidth="10.0" prefWidth="786.399951171875" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="719.0" minWidth="10.0" prefWidth="657.600048828125" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints maxHeight="207.0" minHeight="10.0" prefHeight="193.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="122.0" minHeight="10.0" prefHeight="72.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label text="Gestion des évènements" GridPane.halignment="LEFT" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+                     <font>
+                        <Font name="System Bold" size="36.0" />
+                     </font>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <GridPane.margin>
+                        <Insets left="75.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <GridPane GridPane.rowIndex="1">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="471.3333435058594" minWidth="10.0" prefWidth="263.40001525878904" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="720.9999847412109" minWidth="10.0" prefWidth="523.3999847412109" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <ComboBox fx:id="sitesComboBox" onAction="#filtreUpdate" prefHeight="30.0" prefWidth="180.0" promptText="Site" style="-fx-background-color: #EBF0F6; -fx-background-radius: 5;" GridPane.halignment="RIGHT" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+                           <GridPane.margin>
+                              <Insets right="10.0" />
+                           </GridPane.margin>
+                        </ComboBox>
+                        <ComboBox fx:id="sportsComboBox" onAction="#filtreUpdate" prefHeight="30.0" prefWidth="180.0" promptText="Sport" style="-fx-background-color: #EBF0F6; -fx-background-radius: 5;" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+                           <GridPane.margin>
+                              <Insets left="10.0" />
+                           </GridPane.margin>
+                        </ComboBox>
+                     </children>
+                  </GridPane>
+                  <GridPane GridPane.columnIndex="1">
+                    <rowConstraints>
+                      <RowConstraints maxHeight="147.0" minHeight="10.0" prefHeight="91.0" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="93.0" minHeight="10.0" prefHeight="92.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="91.0" prefWidth="659.0" spacing="15.0">
+                           <children>
+                              <Button mnemonicParsing="false" onAction="#calendarAssignment" prefHeight="60.0" prefWidth="127.0" style="-fx-background-color: #121315; -fx-background-radius: 10; -fx-text-fill: white;" stylesheets="@../../css/button.css" text="Planning">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Button>
+                              <Button mnemonicParsing="false" onAction="#carteLink" prefHeight="60.0" prefWidth="127.0" style="-fx-background-color: #121315; -fx-background-radius: 10; -fx-text-fill: white;" stylesheets="@../../css/button.css" text="Carte">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Button>
+                              <Button mnemonicParsing="false" onAction="#GestionSecouristeButton" prefHeight="59.0" prefWidth="346.0" style="-fx-background-color: #EBF0F6; -fx-background-radius: 10;" styleClass="light-button" stylesheets="@../../css/button.css" text="Gestion des secouristes">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets right="35.0" />
+                                 </HBox.margin>
+                              </Button>
+                           </children>
+                        </HBox>
+                     </children>
+                     <columnConstraints>
+                        <ColumnConstraints />
+                     </columnConstraints>
+                  </GridPane>
+                  <HBox alignment="CENTER_RIGHT" prefHeight="62.0" prefWidth="654.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#relationCompetence" style="-fx-background-color: #121315; -fx-background-radius: 10;" textFill="WHITE">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <graphic>
+                              <GridPane prefHeight="9.0" prefWidth="202.0">
+                                <columnConstraints>
+                                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="201.60000000000002" minWidth="10.0" prefWidth="201.60000000000002" />
+                                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="93.333251953125" minWidth="0.0" prefWidth="0.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                  <RowConstraints />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                                 <children>
+                                    <Label prefHeight="26.0" prefWidth="187.0" stylesheets="@../../css/button.css" text="Relation des compétences" textFill="WHITE" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                       <GridPane.margin>
+                                          <Insets />
+                                       </GridPane.margin>
+                                    </Label>
+                                 </children>
+                              </GridPane>
+                           </graphic>
+                           <HBox.margin>
+                              <Insets right="35.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#CreationDPSButton" style="-fx-background-color: #121315; -fx-background-radius: 10;" textFill="WHITE">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <graphic>
+                              <GridPane prefHeight="9.0" prefWidth="202.0">
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="182.666748046875" minWidth="10.0" prefWidth="156.3333740234375" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="93.333251953125" minWidth="10.0" prefWidth="44.6666259765625" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <Label prefHeight="25.0" prefWidth="148.0" stylesheets="@../../css/button.css" text="Créer un évènement" textFill="WHITE" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                       <GridPane.margin>
+                                          <Insets />
+                                       </GridPane.margin>
+                                    </Label>
+                                    <ImageView fitHeight="21.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+                                       <image>
+                                          <Image url="@../../images/plus.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                              </GridPane>
+                           </graphic>
+                           <HBox.margin>
+                              <Insets right="25.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                     <GridPane.margin>
+                        <Insets left="20.0" />
+                     </GridPane.margin>
+                  </HBox>
+               </children>
+            </GridPane>
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>
